@@ -45,16 +45,29 @@ class AESCipher(object):
 def check():
     if len(sys.argv) != 4:
         print("[!] Error on arguments.")
+        print("Example: {} password AWS_KEY AWS_ACCESS".format(sys.argv[0]))
         sys.exit(1)
 
 
 if __name__ == "__main__":
     check()
-    crypto = AESCipher(str(sys.argv[1]))
+    try:
+        crypto = AESCipher(str(sys.argv[1]))
+    except Exception as e:
+        print("[!] Error creating AESCipher object")
+        print("[!] {}".format(str(e)))
+        sys.exit(1)
+
     print(banner)
-    print("\nEncrypyed AWS_KEY: " + str(crypto.encrypt(str(sys.argv[2]))))
-    print("Encrypted AWS_ACCESS: " + str(crypto.encrypt(str(sys.argv[3]))))
-    print("\n[*] Keep secret the password used, and put this ciphered text into main.py script.")
-    sys.exit(0)
+
+    try:
+        print("\nEncrypyed AWS_KEY: " + str(crypto.encrypt(str(sys.argv[2]))))
+        print("Encrypted AWS_ACCESS: " + str(crypto.encrypt(str(sys.argv[3]))))
+        print("\n[*] Keep secret the password used, and put this ciphered text into main.py script.")
+        sys.exit(0)
+    except Exception as e:
+        print("[!] Error encrypting data")
+        print("[!] {}".format(str(e)))
+        sys.exit(1)
 
 
