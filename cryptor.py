@@ -50,6 +50,7 @@ def check():
 
 
 if __name__ == "__main__":
+    sys.exit(1)
     check()
     try:
         crypto = AESCipher(str(sys.argv[1]))
