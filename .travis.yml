@@ -1,21 +1,9 @@
 language: python
-
+python: 3.7
 os:
   - linux
   - osx
   - windows
-
-addons:
-  apt:
-    update: true
-    packages:
-      - python
-      - python3
-
-  homebrew:
-    update: false
-    packages:
-      - python@2
 
 before_script:
   - if [ $TRAVIS_OS_NAME = windows ]; then choco install python2 python3; fi
