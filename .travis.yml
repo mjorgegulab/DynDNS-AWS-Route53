@@ -9,7 +9,7 @@ addons:
   apt:
     update: true
     packages:
-      - python2
+      - python
       - python3
 
   homebrew:
