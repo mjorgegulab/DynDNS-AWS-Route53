@@ -18,8 +18,8 @@ banner = '''  ___               ___  _  _ ___      ___      _____
 global KEY_ID
 global KEY_ACCESS
 
-KEY_ID = b'z3+XCgcbyXfzE6c9avvfKYPyaayAkQjzJ7uEuuMALy2EKeMMxjtttUMuOaDGQUcf'
-KEY_ACCESS = b'l0Q4/U1hXtf1dknVhLXjvMgPdxNeQutYDv2Ta4e/yAPe59cTRB5nAkH38mgo7atpy3QEHP1d2Dqz8IDHjw4XNZhXMpyd8rqHDENyrrSzIgE='
+KEY_ID = b''
+KEY_ACCESS = b''
 
 
 def check():
